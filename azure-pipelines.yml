@@ -6,6 +6,14 @@
 trigger:
 - master
 
+schedules:
+- cron: "*/5 * * * *"
+  displayName: Daily five minutes build
+  branches:
+    include:
+    - master
+  always: true
+
 pool:
   vmImage: 'ubuntu-latest'
 
